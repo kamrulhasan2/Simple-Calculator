@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import NumberField from './components/ui/NumberField';
-import Button from './components/ui/Button';
 import InputSection from './components/inputs/InputSection';
 import OperationSection from './components/operations/OperationSection';
+import HistorySection from './components/history/HistorySection';
 
 const initalInputState = {
   a: 20,
@@ -61,7 +60,7 @@ function App() {
       result
     }
     
-    // setHistories({history, ...histories});
+
     setHistories([history, ...histories]);
   }
 
@@ -82,31 +81,11 @@ function App() {
       />
 
       
-      <div>
-        <p>History</p>
-        {histories.length === 0 ? (
-          <p>
-            <small>There is no history</small>
-          </p>
-        ) : (
-          <ul>
-            {histories.map((historyItem) => (
-              <li key={historyItem.id}>
-                <p>
-                  Operations: {historyItem.inputs.a} {historyItem.Operation}{' '}
-                  {historyItem.inputs.b}, Result = {historyItem.result}
-                </p>
-                <small>
-                  {historyItem.date.toLocaleDateString()}{' '}
-                  {historyItem.date.toLocaleTimeString()}
-                </small>
-
-                <button onClick={()=>handleRestoreBtn(historyItem)} disabled={restoredHistory !== null && restoredHistory === historyItem.id} >Restore</button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+      <HistorySection 
+        handleRestoreBtn={handleRestoreBtn} 
+        histories={histories} 
+        restoredHistory={restoredHistory}
+      />
 
     </div>
   )
