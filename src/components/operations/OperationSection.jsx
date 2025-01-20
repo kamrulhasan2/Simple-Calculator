@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from '../ui/Button';
 import shortid from 'shortid';
+import PropTypes from 'prop-types';
 
-function OperationSection({handelArithmeticOps,handleClearOps,customStyle}) {
+function OperationSection({handelArithmeticOps,handleClearOps}) {
 
     const operations = [
         {
@@ -55,6 +56,11 @@ function OperationSection({handelArithmeticOps,handleClearOps,customStyle}) {
 
       </div>
   )
+}
+
+OperationSection.propTypes = {
+    handelArithmeticOps: PropTypes.func.isRequired,
+    handleClearOps: PropTypes.func.isRequired
 }
 
 export default OperationSection;
