@@ -33,6 +33,11 @@ function OperationSection({handelArithmeticOps,handleClearOps,customStyle}) {
         },
         {
             id: shortid.generate(),
+            text: '**',
+            onClick: ()=>handelArithmeticOps('**'),
+        },
+        {
+            id: shortid.generate(),
             text: 'Clear',
             onClick: handleClearOps,
             customStyle: {backgroundColor:'red',color:'#fff'}
