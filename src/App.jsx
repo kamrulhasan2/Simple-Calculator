@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div>
-      <h2>Result: {result} </h2>
+      <h2 className='result'>Result: {result} </h2>
       <InputSection inputs={inputState} inputStateHandeler={inputStateHandeler} />
 
       <OperationSection 
