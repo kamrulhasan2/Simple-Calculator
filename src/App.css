@@ -8,6 +8,18 @@ body{
     max-width: 1280px;
     margin: auto;
     text-align: center;
+    background: #f0ebeb;
+}
+ul li{
+    list-style: none;
+}
+.container{
+    max-width: 630px;
+    height: 300svh;
+    margin: auto;
+    text-align: center;
+    background: #e6d8d8;
+    border-radius: 1rem;
 }
 
 .result{

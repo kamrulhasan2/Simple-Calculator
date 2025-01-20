@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function HistorySection({histories,restoredHistory,handleRestoreBtn}) {
   return (
     <div>
-        <p>History</p>
+        <p style={{fontSize:'0.9rem',fontWeight:'bold',margin:'0.6rem'}}>History</p>
         {histories.length === 0 ? (
         <p>
             <small>There is no history</small>

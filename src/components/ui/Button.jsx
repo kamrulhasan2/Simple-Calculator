@@ -5,7 +5,7 @@ function Button({ text, onClick, disabled, customStyle }) {
 
     const disabledStyle = {
 		backgroundColor: '#999',
-		color: '#333',
+		color: '#222',
 		cursor: 'not-allowed',
 	};
 

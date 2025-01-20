@@ -5,43 +5,56 @@ import PropTypes from 'prop-types';
 
 function OperationSection({handelArithmeticOps,handleClearOps}) {
 
+    const OperationBtnStyle ={
+        backgroundColor:'#fff',
+        color:'#999',
+        fontWetight: 'bold',
+        border:'1px solid #999',
+        borderRadius: '0.3rem'
+    }
+
     const operations = [
         {
             id: shortid.generate(),
             text: '+',
             onClick: ()=>handelArithmeticOps('+'),
-            disabled: 'disabled'
+            customStyle: OperationBtnStyle
         },
         {
             id: shortid.generate(),
             text: '-',
             onClick: ()=>handelArithmeticOps('-'),
+            customStyle: OperationBtnStyle
         },
         {
             id: shortid.generate(),
             text: '*',
             onClick: ()=>handelArithmeticOps('*'),
+            customStyle: OperationBtnStyle
         },
         {
             id: shortid.generate(),
             text: '/',
             onClick: ()=>handelArithmeticOps('/'),
+            customStyle: OperationBtnStyle
         },
         {
             id: shortid.generate(),
             text: '%',
             onClick: ()=>handelArithmeticOps('%'),
+            customStyle: OperationBtnStyle
         },
         {
             id: shortid.generate(),
             text: '**',
             onClick: ()=>handelArithmeticOps('**'),
+            customStyle: OperationBtnStyle
         },
         {
             id: shortid.generate(),
             text: 'Clear',
             onClick: handleClearOps,
-            customStyle: {backgroundColor:'red',color:'#fff'}
+            customStyle: {...OperationBtnStyle,backgroundColor:'red',color:'#fff'}
         }
 
     ]

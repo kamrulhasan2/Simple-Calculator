@@ -71,7 +71,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container'>
       <h2 className='result'>Result: {result} </h2>
       <InputSection inputs={inputState} inputStateHandeler={inputStateHandeler} />
 
