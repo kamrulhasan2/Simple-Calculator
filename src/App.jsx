@@ -3,6 +3,7 @@ import './App.css';
 import NumberField from './components/ui/NumberField';
 import Button from './components/ui/Button';
 import InputSection from './components/inputs/InputSection';
+import OperationSection from './components/operations/OperationSection';
 
 const initalInputState = {
   a: 20,
@@ -75,17 +76,12 @@ function App() {
       <h2>Result: {result} </h2>
       <InputSection inputs={inputState} inputStateHandeler={inputStateHandeler} />
 
-      <div>
-        <h3>Operations</h3>
+      <OperationSection 
+        handelArithmeticOps={handelArithmeticOps} 
+        handleClearOps={handleClearOps}
+      />
 
-        <Button text={'+'} onClick={()=>handelArithmeticOps('+')} disabled={true}/>
-        <Button text={'-'} onClick={()=>handelArithmeticOps('-')} />
-        <Button text={'*'} onClick={()=>handelArithmeticOps('*')}/>
-        <Button text={'/'} onClick={()=>handelArithmeticOps('/')}/>
-        <Button text={'%'} onClick={()=>handelArithmeticOps('%')}/>
-        <Button text={'Clear'} onClick={handleClearOps} customStyle={{backgroundColor: 'red',color: '#fff'}}/>
-      </div>
-
+      
       <div>
         <p>History</p>
         {histories.length === 0 ? (
