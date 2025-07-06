@@ -5,8 +5,8 @@ import OperationSection from './components/operations/OperationSection';
 import HistorySection from './components/history/HistorySection';
 
 const initalInputState = {
-  a: 20,
-  b: 10,
+  a: 0,
+  b: 0,
 }
 
 function* generateId(){
