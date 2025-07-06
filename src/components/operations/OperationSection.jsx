@@ -50,6 +50,12 @@ function OperationSection({handelArithmeticOps,handleClearOps}) {
             onClick: ()=>handelArithmeticOps('**'),
             customStyle: OperationBtnStyle
         },
+         {
+            id: shortid.generate(),
+            text: 'root',
+            onClick: ()=>handelArithmeticOps('root'),
+            customStyle: OperationBtnStyle
+        },
         {
             id: shortid.generate(),
             text: 'Clear',
