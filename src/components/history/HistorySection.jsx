@@ -13,9 +13,9 @@ function HistorySection({histories,restoredHistory,handleRestoreBtn}) {
         </p>
         ) : (
         <ul>
-            {histories.map((historyItem,index) => (
+            {histories.map((historyItem) => (
             //history item
-            <HistoryItem key={index}
+            <HistoryItem key={historyItem.id}
                 historyItem={historyItem} 
                 handleRestoreBtn={handleRestoreBtn}
                 disabled={restoredHistory !== null && restoredHistory === historyItem.id} 
