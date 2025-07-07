@@ -48,6 +48,31 @@ function App() {
       return;
     }
 
+    if(Operation === 'root'){
+      if(inputState.a < 0 ){
+        alert('Invalid input for root operation');
+        alert('Root operation is only valid for positive numbers or square root');
+        return;
+      }
+      if(inputState.b !== 2){
+        alert('Root operation is only valid for square root');
+        alert('Please enter 2 for second input');
+        return;
+      }
+      const result = Math.sqrt(inputState.a);
+      const history = {
+        id: getId.next().value,
+        inputs: {...inputState},
+        date: new Date(),
+        Operation,
+        result
+      }
+      setResult(result);
+      setHistories([history, ...histories]);
+      setRestoredHistory(history.id);
+      return;
+    }
+
     const f = new Function('Opration',`return ${inputState.a} ${Operation} ${inputState.b}`);
     const result = f(Operation);
     setResult(result);
